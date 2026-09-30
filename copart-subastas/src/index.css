@@ -1,0 +1,70 @@
+:root {
+  --copart-blue: #004b87;
+  --copart-blue-hover: #003662;
+  --bg-main: #f4f6f9;
+  --bg-surface: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --green-damage: #10b981;
+  --yellow-damage: #f59e0b;
+  --red-damage: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Badges de daño exigidos */
+.badge-damage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-verde { background-color: #d1fae5; color: #065f46; }
+.badge-amarillo { background-color: #fef3c7; color: #92400e; }
+.badge-rojo { background-color: #fee2e2; color: #991b1b; }
+
+/* Botones y formularios */
+.btn-primary {
+  background-color: var(--copart-blue);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-primary:hover { background-color: var(--copart-blue-hover); }
+
+.input-field {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: #fff;
+  color: var(--text-main);
+}
+.input-field:focus {
+  outline: 2px solid var(--copart-blue);
+  border-color: transparent;
+}
