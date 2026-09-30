@@ -5,7 +5,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyD-hK7SC13zNKMZ1VONGounmvXx_2pyH0Y",
   authDomain: "copartsubastas-dba28.firebaseapp.com",
-  databaseURL: "https://copartsubastas-dba28-default-rtdb.firebaseio.com",
+  databaseURL: "https://copartsubastas-dba28-default-rtdb.firebaseio.com/",
   projectId: "copartsubastas-dba28",
   storageBucket: "copartsubastas-dba28.firebasestorage.app",
   messagingSenderId: "152758820266",

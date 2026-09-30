@@ -5,11 +5,11 @@ export default function ImageCarousel({ imagenes = [] }) {
 
   // Asegurar que siempre existan imágenes visibles
   const fotos = imagenes.length > 0 ? imagenes : [
-    'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&auto=format&fit=crop&q=80'
+    'https://di-enrollment-api.s3.amazonaws.com/toyota/models/2022/corolla/trims/SE+Nightshade+Edition.jpg',
+    'https://mystrongad.com/CFT_CentralFloridaToyota/Digital/Corolla/22%20Corolla/22-Toyota-Corolla-LE-White1-SM.png',
+    'https://img.sm360.ca/ir/w640h480/images/article/erin-park-automotive/95647//corolla_hybrid_015_e77b4e6b23a9ba1b29ab566717ca9327e37697ce1640241241348.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo2KdVD1ISejZAlmdiY6s9ymuoE9fvL5gNy5uPP-3h_b4y_gHzzfzbUgD0&s=10',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRmT9gyt39frximubn-9dpaT2F9jUvGTbnKv5tXAedjQkNnre--OwbX_c&s=10'
   ];
 
   const anterior = () => {
