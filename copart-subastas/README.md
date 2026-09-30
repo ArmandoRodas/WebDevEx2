@@ -1,16 +1,44 @@
-# React + Vite
+# Plataforma Web de Subastas de Vehículos en Tiempo Real (Caso Copart)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Sistema desacoplado de subastas de vehículos importados en tiempo real desarrollado para la evaluación de Desarrollo y Diseño Web (Ingeniería en Sistemas - UMG).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Enlace del Proyecto Desplegado
+- **Sitio Web en Producción:** https://web-dev-ex2.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👥 Credenciales de Prueba (Para Pruebas Cruzadas)
+Para evaluar la interacción multiusuario en tiempo real sin recargar pantalla, utilice las siguientes cuentas en ventanas separadas o en modo incógnito:
 
-## Expanding the Oxlint configuration
+| Rol | Correo Electrónico | Contraseña | Publicaciones Asignadas |
+| :--- | :--- | :--- | :--- |
+| **Proveedor** | `proveedor@copart.gt` | `Subasta123` | Toyota Corolla LE, Honda CR-V EX |
+| **Comprador 1** | `comprador1@copart.gt` | `Subasta123` | Ford Mustang GT / F-150 |
+| **Comprador 2** | `comprador2@copart.gt` | `Subasta123` | Postor general |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## 🛠️ Arquitectura y Tecnologías
+- **Frontend:** React + Vite (Single Page Application).
+- **Backend / Persistencia NoSQL:** Firebase Realtime Database (comunicación bidireccional en tiempo real).
+- **Autenticación y Seguridad:** Firebase Authentication.
+- **Estilos:** Paleta clara corporativa inspirada en Copart (evitando temas oscuros).
+
+---
+
+## 📋 Reglas de Negocio Implementadas
+1. **Restricción de Acceso:** Usuarios anónimos únicamente tienen acceso de lectura al catálogo. Es obligatorio iniciar sesión para ofertar o publicar vehículos.
+2. **Clasificación Visual de Daño:**
+   - 🟢 **Verde:** Daño menor / Limpio.
+   - 🟡 **Amarillo:** Daño medio / Reparable.
+   - 🔴 **Rojo:** Daño severo / Salvamento.
+3. **Galería Interactiva:** Mínimo 5 fotografías por vehículo con carrusel interactivo y navegación por miniaturas.
+4. **Filtros Multitarea:** Filtrado combinado por Marca, Estado de Daño, Tipo de Combustible y Año.
+5. **Motor de Pujas en Vivo:**
+   - La nueva oferta debe ser mayor o igual al monto base.
+   - Regla de incremento: Toda nueva puja debe superar la oferta actual por un margen de al menos **10%**.
+   - Privacidad garantizada: Únicamente se visualiza el monto de la oferta actual más alta, manteniendo anónima la identidad de los postores.
+   - Indicador dinámico de estado: Alerta verde (*"¡Vas ganando esta subasta!"*) y alerta roja (*"Tu oferta ha sido superada"*).
+6. **Edición de Publicaciones:** Los usuarios registrados pueden buscar y modificar únicamente las publicaciones que les pertenecen.
